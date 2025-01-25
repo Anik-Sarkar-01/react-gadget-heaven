@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar bg-purple-500">
+        <div className="navbar bg-purple-500 max-w-[1450px] mx-auto mt-8 rounded-t-3xl ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
