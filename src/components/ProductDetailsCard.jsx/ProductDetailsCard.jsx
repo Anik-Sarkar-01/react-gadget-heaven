@@ -1,0 +1,60 @@
+import { Link, useParams } from "react-router-dom";
+import { CiHeart } from "react-icons/ci";
+import { FaStar } from "react-icons/fa6";
+import PropTypes from "prop-types";
+
+const ProductDetailsCard = ({data}) => {
+    
+    const { productId } = useParams();
+    const desiredProduct = data.find(product => product.product_id === parseInt(productId));
+    console.log(desiredProduct);
+    const { product_image, product_title, price, availability, description, specification, rating } = desiredProduct;
+
+    console.log(product_image);
+    return (
+
+        <div className="hero  max-w-5xl mx-auto my-40 rounded-3xl bg-base-200 ">
+            <div className="hero-content flex-col lg:flex-row gap-10">
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                    className="max-w-sm rounded-lg shadow-2xl" />
+                <div className="space-y-2">
+                    <h1 className="text-3xl font-semibold">{product_title}</h1>
+                    <p className="font-semibold">Price: $ {price}</p>
+                    <div>
+                        {availability && <button className="btn btn-sm btn-outline btn-success rounded-3xl">In Stock</button>}
+                        {(!availability) && <button className="btn btn-sm btn-outline btn-error rounded-3xl">Out of Stock</button>}
+                    </div>
+                    <p className="py-6">{description}</p>
+                    <p className="font-semibold">Specification:</p>
+                    <ol className="list-decimal ml-4">
+                        {
+                            specification.map((feature, idx) => <li key={idx}>{feature}</li>)
+                        }
+                    </ol>
+                    <p className="font-semibold">Rating: </p>
+                    <div className="flex items-center gap-3">
+                        <div className="flex">
+                            <FaStar className="text-2xl text-amber-400"></FaStar>
+                            <FaStar className="text-2xl text-amber-400"></FaStar>
+                            <FaStar className="text-2xl text-amber-400"></FaStar>
+                            <FaStar className="text-2xl text-amber-400"></FaStar>
+                        </div>
+                        <div className="text-xl btn rounded-3xl">
+                            {rating}
+                        </div>
+                    </div>
+                    <div className="flex gap-3 items-center">
+                        <Link className="bg-violet-500 rounded-3xl px-4 py-3">Add To Cart</Link>
+                        <Link className="bg-gray-200 text-2xl rounded-full p-2"><CiHeart></CiHeart></Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    );
+};
+ProductDetailsCard.propTypes = {
+    data: PropTypes.array.isRequired,
+};
+export default ProductDetailsCard;

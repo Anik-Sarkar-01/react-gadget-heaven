@@ -1,0 +1,152 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Dell XPS 13",
+        "product_image": "dell_xps_13.jpg",
+        "category": "Laptops",
+        "price": 1299,
+        "description": "Ultra-portable laptop with InfinityEdge display",
+        "specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 Processor"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 2,
+        "product_title": "MacBook Pro 16-inch",
+        "product_image": "macbook_pro_16.jpg",
+        "category": "Laptops",
+        "price": 2399,
+        "description": "Powerful laptop for creatives and professionals",
+        "specification": [
+            "32GB RAM",
+            "1TB SSD",
+            "Apple M1 Pro Chip"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 3,
+        "product_title": "HP Spectre x360",
+        "product_image": "hp_spectre_x360.jpg",
+        "category": "Laptops",
+        "price": 1099,
+        "description": "Convertible laptop with stunning design",
+        "specification": [
+            "16GB RAM",
+            "1TB SSD",
+            "Intel i5 Processor"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 4,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "lenovo_thinkpad_x1_carbon.jpg",
+        "category": "Laptops",
+        "price": 1399,
+        "description": "Business laptop with military-grade durability",
+        "specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 Processor"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 5,
+        "product_title": "Asus ZenBook 14",
+        "product_image": "asus_zenbook_14.jpg",
+        "category": "Laptops",
+        "price": 999,
+        "description": "Thin and light laptop with powerful performance",
+        "specification": [
+            "8GB RAM",
+            "512GB SSD",
+            "AMD Ryzen 7 Processor"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 6,
+        "product_title": "Acer Swift 5",
+        "product_image": "acer_swift_5.jpg",
+        "category": "Laptops",
+        "price": 799,
+        "description": "Slim and portable laptop for everyday use",
+        "specification": [
+            "12GB RAM",
+            "256GB SSD",
+            "Intel i5 Processor"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 7,
+        "product_title": "iPhone 13 Pro",
+        "product_image": "iphone_13_pro.jpg",
+        "category": "Phones",
+        "price": 1099,
+        "description": "Flagship iPhone with Pro camera system",
+        "specification": [
+            "6.1-inch Super Retina XDR Display",
+            "128GB Storage",
+            "A15 Bionic Chip"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": 8,
+        "product_title": "Samsung Galaxy S21 Ultra",
+        "product_image": "samsung_galaxy_s21_ultra.jpg",
+        "category": "Phones",
+        "price": 1199,
+        "description": "Premium Android phone with S Pen support",
+        "specification": [
+            "6.8-inch Dynamic AMOLED 2X Display",
+            "256GB Storage",
+            "Exynos 2100 Processor"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": 9,
+        "product_title": "Apple Watch Series 7",
+        "product_image": "apple_watch_series_7.jpg",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "Advanced smartwatch with larger display",
+        "specification": [
+            "Always-On Retina Display",
+            "ECG & Blood Oxygen Monitoring",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 10,
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "samsung_galaxy_watch_4.jpg",
+        "category": "Smart Watches",
+        "price": 299,
+        "description": "Feature-packed smartwatch with Wear OS",
+        "specification": [
+            "Circular Super AMOLED Display",
+            "Fitness Tracking",
+            "Built-in GPS"
+        ],
+        "availability": false,
+        "rating": 4.4
+    }
+]

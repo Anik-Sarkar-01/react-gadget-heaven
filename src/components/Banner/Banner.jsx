@@ -2,7 +2,7 @@ import banner from '../../assets/banner.jpg';
 
 const Banner = () => {
     const bannerStyle = { backgroundImage: `url(${banner})` }
-    console.log(banner);
+    
     return (
         <div className="hero  min-h-screen text-white">
             <div className="hero-content text-center flex-col max-w-full gap-0 p-0">
