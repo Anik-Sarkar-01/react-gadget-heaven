@@ -1,19 +1,40 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import { addToCart, addToFavorites, getAllProductsFavorites} from "../../utils";
+import { useEffect, useState } from "react";
 
-const ProductDetailsCard = ({data}) => {
-    
+const ProductDetailsCard = ({ data }) => {
+
     const { productId } = useParams();
-    const desiredProduct = data.find(product => product.product_id === parseInt(productId));
-    console.log(desiredProduct);
-    const { product_image, product_title, price, availability, description, specification, rating } = desiredProduct;
+    const [product, setProduct] = useState([]);
+    const [isFavorite, setIsFavorite] = useState(false);
 
-    console.log(product_image);
+    useEffect(() => {
+        const desiredProduct = data.find(item => item.product_id === parseInt(productId));
+        setProduct(desiredProduct);
+
+        const favoriteProducts = getAllProductsFavorites();
+        const isExist = favoriteProducts.find(item => item.product_id === desiredProduct.product_id);
+        if (isExist) {
+            setIsFavorite(true);
+        }
+    }, [data, productId]);
+
+    const { product_title, price, availability, description, specification, rating } = product;
+
+    const handleAddToCart = (product) => {
+        addToCart(product);
+    }
+
+    const handleAddToFavorites = product => {
+        addToFavorites(product);
+        setIsFavorite(true);
+    }
+
     return (
-
-        <div className="hero  max-w-5xl mx-auto my-40 rounded-3xl bg-base-200 ">
+        <div className="hero max-w-5xl mx-auto my-40 rounded-3xl bg-base-200">
             <div className="hero-content flex-col lg:flex-row gap-10">
                 <img
                     src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
@@ -29,7 +50,7 @@ const ProductDetailsCard = ({data}) => {
                     <p className="font-semibold">Specification:</p>
                     <ol className="list-decimal ml-4">
                         {
-                            specification.map((feature, idx) => <li key={idx}>{feature}</li>)
+                             specification && specification.map((feature, idx) => <li key={idx}>{feature}</li>)
                         }
                     </ol>
                     <p className="font-semibold">Rating: </p>
@@ -45,16 +66,17 @@ const ProductDetailsCard = ({data}) => {
                         </div>
                     </div>
                     <div className="flex gap-3 items-center">
-                        <Link className="bg-violet-500 rounded-3xl px-4 py-3">Add To Cart</Link>
-                        <Link className="bg-gray-200 text-2xl rounded-full p-2"><CiHeart></CiHeart></Link>
+                        <button onClick={() => handleAddToCart(product)} className="btn bg-violet-500 rounded-3xl px-4 py-3">Add To Cart</button>
+                        <button disabled={isFavorite} onClick={() => handleAddToFavorites(product)} className="btn bg-gray-200 text-2xl rounded-full p-2"><CiHeart></CiHeart></button>
                     </div>
                 </div>
             </div>
         </div>
-
     );
 };
+
 ProductDetailsCard.propTypes = {
     data: PropTypes.array.isRequired,
 };
+
 export default ProductDetailsCard;
