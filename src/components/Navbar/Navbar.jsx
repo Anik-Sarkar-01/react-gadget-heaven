@@ -7,6 +7,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistics'>Statistics</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+        <li><NavLink to='/blogs'>Blogs</NavLink></li>
     </>
     return (
         <div className="navbar bg-purple-500 max-w-[1450px] mx-auto mt-8 rounded-t-3xl ">
