@@ -1,16 +1,31 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+
+    const [navColor, setNavColor] = useState("bg-white")
+    const location = useLocation();
+    console.log(location);
+
+    useEffect(() => {
+        if(location.pathname === '/'){
+            setNavColor("bg-purple-500");
+        }
+        else{
+            setNavColor("bg-white")
+        }
+    }, [location.pathname])
+
     const navItems = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/statistics'>Statistics</NavLink></li>
-        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-        <li><NavLink to='/blogs'>Blogs</NavLink></li>
+        <li><NavLink to='/' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`} >Home</NavLink></li>
+        <li><NavLink to='/statistics' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Statistics</NavLink></li>
+        <li><NavLink to='/dashboard' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Dashboard</NavLink></li>
+        <li><NavLink to='/blogs' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Blogs</NavLink></li>
     </>
     return (
-        <div className="navbar bg-purple-500 max-w-[1450px] mx-auto mt-8 rounded-t-3xl ">
+        <div className={`navbar ${navColor} max-w-[1450px] mx-auto mt-8 rounded-t-3xl `}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

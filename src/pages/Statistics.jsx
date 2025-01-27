@@ -1,5 +1,7 @@
 import Heading from "../components/Heading/Heading";
+import useTitle from "../hooks/useTitle";
 const Statistics = () => {
+    useTitle("Statistics");
     return (
         <div>
             <Heading

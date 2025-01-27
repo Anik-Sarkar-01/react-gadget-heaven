@@ -22,7 +22,7 @@ const ProductDetailsCard = ({ data }) => {
         }
     }, [data, productId]);
 
-    const { product_title, price, availability, description, specification, rating } = product;
+    const { product_image, product_title, price, availability, description, specification, rating } = product;
 
     const handleAddToCart = (product) => {
         addToCart(product);
@@ -37,8 +37,8 @@ const ProductDetailsCard = ({ data }) => {
         <div className="hero max-w-5xl mx-auto my-40 rounded-3xl bg-base-200">
             <div className="hero-content flex-col lg:flex-row gap-10">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                    className="max-w-sm rounded-lg shadow-2xl" />
+                    src={product_image}
+                    className="max-w-lg rounded-lg h-[350px]" />
                 <div className="space-y-2">
                     <h1 className="text-3xl font-semibold">{product_title}</h1>
                     <p className="font-semibold">Price: $ {price}</p>

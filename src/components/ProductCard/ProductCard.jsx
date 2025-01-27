@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
     const {product_id, product_image, product_title, price } = product;
-    console.log(product_image);
+    
     return (
         <div>
-            <div className="card bg-base-100 w-96 shadow-sm">
+            <div className="card bg-base-100 w-96 shadow-lg">
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        className="h-[300px] p-3"
+                        src={product_image}
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">

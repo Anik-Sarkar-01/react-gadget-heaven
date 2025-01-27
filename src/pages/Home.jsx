@@ -1,8 +1,10 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner/Banner";
 import Categories from "../components/Categories/Categories";
+import useTitle from "../hooks/useTitle";
 
 const Home = () => {
+    useTitle("Home");
     const categories = useLoaderData();
     return (
         <div className="max-w-[1450px] mx-auto">

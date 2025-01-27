@@ -2,7 +2,7 @@
     {
         "product_id": 1,
         "product_title": "Dell XPS 13",
-        "product_image": "dell_xps_13.jpg",
+        "product_image": "https://i.ibb.co.com/jbHqyRJ/notebook-xps-9315-nt-blue-gallery-3.jpg",
         "category": "Laptops",
         "price": 1299,
         "description": "Ultra-portable laptop with InfinityEdge display",
@@ -17,7 +17,7 @@
     {
         "product_id": 2,
         "product_title": "MacBook Pro 16-inch",
-        "product_image": "macbook_pro_16.jpg",
+        "product_image": "https://i.ibb.co.com/JRGsnrG/Apple-Mac-Book-Pro-14-16-inch-10182021-big-jpg-large.jpg",
         "category": "Laptops",
         "price": 2399,
         "description": "Powerful laptop for creatives and professionals",
@@ -32,7 +32,7 @@
     {
         "product_id": 3,
         "product_title": "HP Spectre x360",
-        "product_image": "hp_spectre_x360.jpg",
+        "product_image": "https://i.ibb.co.com/tCcGcMJ/1c05077e-d0fd-4dcc-90a0-266ef0e9d2fc.jpg",
         "category": "Laptops",
         "price": 1099,
         "description": "Convertible laptop with stunning design",
@@ -47,7 +47,7 @@
     {
         "product_id": 4,
         "product_title": "Lenovo ThinkPad X1 Carbon",
-        "product_image": "lenovo_thinkpad_x1_carbon.jpg",
+        "product_image": "https://i.ibb.co.com/w64C5gJ/615-E1y-Hl-JL.jpg",
         "category": "Laptops",
         "price": 1399,
         "description": "Business laptop with military-grade durability",
@@ -62,7 +62,7 @@
     {
         "product_id": 5,
         "product_title": "Asus ZenBook 14",
-        "product_image": "asus_zenbook_14.jpg",
+        "product_image": "https://i.ibb.co.com/4tmgBSr/download.png",
         "category": "Laptops",
         "price": 999,
         "description": "Thin and light laptop with powerful performance",
@@ -77,7 +77,7 @@
     {
         "product_id": 6,
         "product_title": "Acer Swift 5",
-        "product_image": "acer_swift_5.jpg",
+        "product_image": "https://i.ibb.co.com/Q9YKtKX/seahorse-02.png",
         "category": "Laptops",
         "price": 799,
         "description": "Slim and portable laptop for everyday use",
@@ -92,7 +92,7 @@
     {
         "product_id": 7,
         "product_title": "iPhone 13 Pro",
-        "product_image": "iphone_13_pro.jpg",
+        "product_image": "https://i.ibb.co.com/35xLMv6/Apple-i-Phone-13-Pro-Colors-09142021-big-jpg-large.jpg",
         "category": "Phones",
         "price": 1099,
         "description": "Flagship iPhone with Pro camera system",
@@ -107,7 +107,7 @@
     {
         "product_id": 8,
         "product_title": "Samsung Galaxy S21 Ultra",
-        "product_image": "samsung_galaxy_s21_ultra.jpg",
+        "product_image": "https://i.ibb.co.com/RSXPW8c/Samsung-Galaxy-S21-Ultra1.jpg",
         "category": "Phones",
         "price": 1199,
         "description": "Premium Android phone with S Pen support",
@@ -122,7 +122,7 @@
     {
         "product_id": 9,
         "product_title": "Apple Watch Series 7",
-        "product_image": "apple_watch_series_7.jpg",
+        "product_image": "https://i.ibb.co.com/j8cTXVw/Apple-Watch-Series-7-45mm-GPS-Smartwatch.jpg",
         "category": "Smart Watches",
         "price": 399,
         "description": "Advanced smartwatch with larger display",
@@ -137,7 +137,7 @@
     {
         "product_id": 10,
         "product_title": "Samsung Galaxy Watch 4",
-        "product_image": "samsung_galaxy_watch_4.jpg",
+        "product_image": "https://i.ibb.co.com/vcQQy16/galaxy-watch4-silver-better-sleep.webp",
         "category": "Smart Watches",
         "price": 299,
         "description": "Feature-packed smartwatch with Wear OS",

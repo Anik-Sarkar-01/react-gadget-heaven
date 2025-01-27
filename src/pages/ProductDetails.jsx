@@ -2,11 +2,12 @@
 import { useLoaderData } from "react-router-dom";
 import Heading from "../components/Heading/Heading";
 import ProductDetailsCard from "../components/ProductDetailsCard.jsx/ProductDetailsCard";
+import useTitle from "../hooks/useTitle";
 
 
 
 const ProductDetails = () => {
-
+    useTitle("Product Details");
     const data = useLoaderData();
 
     return (
