@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const [navColor, setNavColor] = useState("bg-white")
     const location = useLocation();
-    console.log(location);
+    
 
     useEffect(() => {
         if(location.pathname === '/'){
