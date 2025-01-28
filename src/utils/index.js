@@ -24,13 +24,13 @@ const addToCart = (product) => {
     toast.success('Product Added To The Cart!');
 }
 
-// remove a product from local storage
-
 // delete the whole cart
 const removeCart = () => {
     localStorage.removeItem("cart");
     return [];
 }
+
+
 // favorites
 // get CartProducts from local storage
 const getAllProductsFavorites = () => {
@@ -55,7 +55,6 @@ const addToFavorites = (product) => {
 
 }
 
-// remove a product from local storage
 
 
 export { addToCart, getAllProductsInCart, addToFavorites, getAllProductsFavorites, removeCart }

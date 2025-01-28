@@ -16,6 +16,7 @@ const Dashboard = () => {
     const [wishList, setWishList] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
     const [purchaseAmount, setPurchaseAmount] = useState(0);
+    const [purchaseButtonStatus, setPurchaseButtonStatus] = useState(true);
     const data = useLoaderData();
 
 
@@ -28,6 +29,13 @@ const Dashboard = () => {
         const total = cartItems.reduce((acc, curr) => acc + curr.price, 0);
         setTotalCost(total);
         setPurchaseAmount(total);
+
+        if(total === 0){
+            setPurchaseButtonStatus(true);
+        }
+        else{
+            setPurchaseButtonStatus(false);
+        }
     }, [data])
 
     useEffect(() => {
@@ -41,6 +49,7 @@ const Dashboard = () => {
         const sortedByPrice = [...cart].sort((a, b) => b.price - a.price);
         setCart(sortedByPrice);
     }
+
 
     
 
@@ -94,7 +103,7 @@ const Dashboard = () => {
                             <div className="flex items-center gap-3">
                                 <h2 className="font-bold text-xl">Total Cost: {totalCost} $</h2>
                                 <button onClick={() => handleSort()} className="btn border-2 border-purple-500 rounded-3xl text-lg text-purple-500">Sort by Price <GoSortDesc></GoSortDesc></button>
-                                <button onClick={() => handlePurchase()} className="btn bg-purple-500 rounded-3xl text-white text-lg">Purchase</button>
+                                <button disabled={purchaseButtonStatus} onClick={() => handlePurchase()} className="btn bg-purple-500 rounded-3xl text-white text-lg">Purchase</button>
                             </div>
                         </div>
                         <div className="flex flex-col gap-5 mt-5">

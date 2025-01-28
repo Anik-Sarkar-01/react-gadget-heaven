@@ -24,6 +24,7 @@ const Navbar = () => {
         <li><NavLink to='/dashboard' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Dashboard</NavLink></li>
         <li><NavLink to='/blogs' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Blogs</NavLink></li>
     </>
+    
     return (
         <div className={`navbar ${navColor} max-w-[1450px] mx-auto mt-8 rounded-t-3xl `}>
             <div className="navbar-start">
