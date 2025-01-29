@@ -24,7 +24,7 @@ const Navbar = () => {
         <li><NavLink to='/dashboard' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Dashboard</NavLink></li>
         <li><NavLink to='/blogs' className={({isActive}) => `${isActive?'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Blogs</NavLink></li>
     </>
-    
+
     return (
         <div className={`navbar ${navColor} max-w-[1450px] mx-auto mt-8 rounded-t-3xl `}>
             <div className="navbar-start">
@@ -57,8 +57,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <Link className="bg-white rounded-full p-2"><BsCart3></BsCart3></Link>
-                <Link className="bg-white rounded-full p-2"><CiHeart></CiHeart></Link>
+                <Link to="/dashboard/cart" className="bg-white rounded-full p-2"><BsCart3></BsCart3></Link>
+                <Link to="/dashboard/wish-list" className="bg-white rounded-full p-2"><CiHeart></CiHeart></Link>
             </div>
         </div>
     );

@@ -24,6 +24,14 @@ const addToCart = (product) => {
     toast.success('Product Added To The Cart!');
 }
 
+// remove a product from cart
+const removeProductFromCart = (id) => {
+    const cart = getAllProductsInCart();
+    const remainingProducts = cart.filter(product=> product.product_id != id);
+    localStorage.setItem("cart", JSON.stringify(remainingProducts));
+    toast.success('Product successfully removed from Cart!');
+}
+
 // delete the whole cart
 const removeCart = () => {
     localStorage.removeItem("cart");
@@ -32,7 +40,7 @@ const removeCart = () => {
 
 
 // favorites
-// get CartProducts from local storage
+// get favorite products from local storage
 const getAllProductsFavorites = () => {
     const favoriteProducts = localStorage.getItem("favorites");
     if (favoriteProducts) {
@@ -43,7 +51,7 @@ const getAllProductsFavorites = () => {
     }
 }
 
-// add a product to local storage
+// add a product to favorites
 const addToFavorites = (product) => {
     const favorites = getAllProductsFavorites();
     const isExist = favorites.find(item => item.product_id == product.product_id);
@@ -55,6 +63,13 @@ const addToFavorites = (product) => {
 
 }
 
+// remove a product from wishlist
+const removeProductFromFavorites = (id) => {
+    const favoriteProducts = getAllProductsFavorites();
+    const remainingProductsInCart = favoriteProducts.filter(product=> product.product_id != id);
+    localStorage.setItem("favorites", JSON.stringify(remainingProductsInCart));
+    toast.success('Product successfully removed from Wish List!');
+}
 
 
-export { addToCart, getAllProductsInCart, addToFavorites, getAllProductsFavorites, removeCart }
+export { addToCart, getAllProductsInCart, addToFavorites, getAllProductsFavorites, removeCart, removeProductFromCart, removeProductFromFavorites }
