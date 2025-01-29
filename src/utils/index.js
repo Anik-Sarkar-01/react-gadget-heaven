@@ -68,7 +68,6 @@ const removeProductFromFavorites = (id) => {
     const favoriteProducts = getAllProductsFavorites();
     const remainingProductsInCart = favoriteProducts.filter(product=> product.product_id != id);
     localStorage.setItem("favorites", JSON.stringify(remainingProductsInCart));
-    toast.success('Product successfully removed from Wish List!');
 }
 
 

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-const WishCard = ({product, handleRemoveFromFavorite}) => {
+const WishCard = ({product, handleRemoveFromFavorite, handleAddToCart}) => {
     const { product_id, product_image, product_title, description, price} = product;
 
     return (
@@ -14,7 +14,7 @@ const WishCard = ({product, handleRemoveFromFavorite}) => {
                 <div onClick={() => handleRemoveFromFavorite(product_id)} className="absolute top-25 right-10">
                     <button className="btn btn-circle border-red-500">X</button>
                 </div>
-                <button className="btn bg-purple-500 rounded-3xl w-32 text-white">Add To Cart</button>
+                <button onClick={() => handleAddToCart(product)} className="btn bg-purple-500 rounded-3xl w-32 text-white">Add To Cart</button>
             </div>
         </div>
     );
@@ -23,6 +23,7 @@ const WishCard = ({product, handleRemoveFromFavorite}) => {
 WishCard.propTypes = {
     product: PropTypes.object.isRequired,
     handleRemoveFromFavorite: PropTypes.func.isRequired,
+    handleAddToCart: PropTypes.func.isRequired,
 };
 
 export default WishCard;

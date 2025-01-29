@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import WishCard from "../WishCard/WishCard";
 import ProductContext from "../../Contexts/ProductContext";
-import { getAllProductsFavorites, removeProductFromFavorites } from "../../utils";
+import { addToCart, getAllProductsFavorites, removeProductFromFavorites } from "../../utils";
 
 const WishList = () => {
 
@@ -21,12 +21,19 @@ const WishList = () => {
         setWishList(productsInFavorites)
     }
 
+    const handleAddToCart = (product) => {
+        addToCart(product);
+        removeProductFromFavorites(product.product_id);
+        const productsInFavorites = getAllProductsFavorites();
+        setWishList(productsInFavorites);
+    }
+
     return (
         <div>
             <h2 className="font-bold text-xl">Wish List</h2>
             <div className="flex flex-col gap-5 mt-5">
                 {
-                    wishList.map(product => <WishCard handleRemoveFromFavorite={handleRemoveFromFavorite} key={product.product_id} product={product}></WishCard>)
+                    wishList.map(product => <WishCard handleRemoveFromFavorite={handleRemoveFromFavorite} handleAddToCart={handleAddToCart} key={product.product_id} product={product}></WishCard>)
                 }
             </div>
         </div>

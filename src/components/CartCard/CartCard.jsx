@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-const CartAndWishlistCard = ({product, handleRemoveFromCart}) => {
+const CartCard = ({product, handleRemoveFromCart}) => {
+
     const { product_id, product_image, product_title, description, price} = product;
 
     return (
@@ -19,9 +20,9 @@ const CartAndWishlistCard = ({product, handleRemoveFromCart}) => {
     );
 };
 
-CartAndWishlistCard.propTypes = {
+CartCard.propTypes = {
     product: PropTypes.object.isRequired,
     handleRemoveFromCart: PropTypes.func.isRequired,
 };
 
-export default CartAndWishlistCard;
+export default CartCard;

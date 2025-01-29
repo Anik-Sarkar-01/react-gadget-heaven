@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { GoSortDesc } from "react-icons/go";
-import CartAndWishlistCard from "../CartAndWishlistCard/CartAndWishlistCard";
+import CartCard from "../CartCard/CartCard";
 import { useNavigate } from "react-router-dom";
 import groupImage from "../../assets/Group.png"
 import ProductContext from "../../Contexts/ProductContext";
@@ -56,6 +56,16 @@ const Cart = () => {
         removeProductFromCart(id);
         const productsInCart = getAllProductsInCart();
         setCart(productsInCart);
+        const total = productsInCart.reduce((acc, curr) => acc + curr.price, 0);
+        setTotalCost(total);
+        setPurchaseAmount(total);
+
+        if (total === 0) {
+            setPurchaseButtonStatus(true);
+        }
+        else {
+            setPurchaseButtonStatus(false);
+        }
     }
 
     return (
@@ -85,7 +95,7 @@ const Cart = () => {
             </div>
             <div className="flex flex-col gap-5 mt-5">
                 {
-                    cart.map(product => <CartAndWishlistCard handleRemoveFromCart={handleRemoveFromCart} key={product.product_id} product={product}></CartAndWishlistCard>)
+                    cart.map(product => <CartCard handleRemoveFromCart={handleRemoveFromCart} key={product.product_id} product={product}></CartCard>)
                 }
             </div>
 
