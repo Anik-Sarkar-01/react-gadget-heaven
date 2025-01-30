@@ -2,22 +2,21 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { useEffect, useState } from "react";
-import { getAllProductsFavorites, getAllProductsInCart } from "../../utils";
+
 
 
 const Navbar = () => {
     const [navColor, setNavColor] = useState("bg-white");
-    const [cartLength, setCartLength] = useState(0);
-    const [favLength, setFavLength] = useState(0)
     const location = useLocation();
+
     useEffect(() => {
-        if (location.pathname === '/') {
+        const { pathname } = location;
+        if (pathname === '/' || pathname === '/category/All%20Product' || pathname === '/category/Laptops' || pathname === '/category/Phones' || pathname === '/category/Smart%20Watches') {
             setNavColor("bg-purple-500");
+        } else {
+            setNavColor("bg-white");
         }
-        else {
-            setNavColor("bg-white")
-        }
-    }, [location.pathname])
+    }, [location]);
 
     const navItems = <>
         <li className="menu-item"><NavLink to='/' viewTransition className={({ isActive }) => `${isActive ? 'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`} >Home</NavLink></li>
@@ -25,15 +24,6 @@ const Navbar = () => {
         <li className="menu-item"><NavLink to='/dashboard' viewTransition className={({ isActive }) => `${isActive ? 'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Dashboard</NavLink></li>
         <li className="menu-item"><NavLink to='/blogs' viewTransition className={({ isActive }) => `${isActive ? 'btn bg-gray-500' : 'text-black'} btn font-bold btn-outline border-purple-500 rounded-3xl w-36`}>Blogs</NavLink></li>
     </>
-
-    useEffect(() => {
-        const cartData = getAllProductsInCart();
-        const cartLen = cartData.length;
-        setCartLength(cartLen);
-        const favoriteProductsData = getAllProductsFavorites();
-        const favLen = favoriteProductsData.length;
-        setFavLength(favLen);
-    }, [])
 
 
     return (
@@ -69,9 +59,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-4">
                 <Link to="/dashboard" viewTransition className="bg-white rounded-full p-2"><BsCart3></BsCart3></Link>
-                <p>{cartLength}</p>
                 <Link to="/dashboard" viewTransition className="bg-white rounded-full p-2"><CiHeart></CiHeart></Link>
-                <p>{favLength}</p>
             </div>
         </div>
     );

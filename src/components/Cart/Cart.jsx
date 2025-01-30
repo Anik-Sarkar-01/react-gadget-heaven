@@ -76,7 +76,7 @@ const Cart = () => {
                     <h3 className="font-bold text-4xl">Payment Successful</h3>
                     <div className="divider"></div>
                     <p className="py-4">Thanks for purchasing!</p>
-                    <p className="">Price: {purchaseAmount}</p>
+                    <p className="">Price: {purchaseAmount}$</p>
                     <div className="">
                         <form method="dialog">
 

@@ -10,7 +10,7 @@ const WishCard = ({product, handleRemoveFromFavorite, handleAddToCart}) => {
             <div className="space-y-3">
                 <h2 className="font-bold text-xl">{product_title}</h2>
                 <p className="text-gray-400">{description}</p>
-                <p className="font-semibold text-lg">Price:{price}</p>
+                <p className="font-semibold text-lg">Price:{price}$</p>
                 <div onClick={() => handleRemoveFromFavorite(product_id)} className="absolute top-25 right-10">
                     <button className="btn btn-circle border-red-500">X</button>
                 </div>
