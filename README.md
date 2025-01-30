@@ -46,7 +46,7 @@ https://gadget-heaven12.netlify.app/
 *   **JSX:** Employed JSX syntax to write HTML-like code within JavaScript files for creating UI elements.
 *   **Props:** Passed data between components using props to make components dynamic and flexible.
 *   **State:** Managed component-specific data and reactivity by using state to update the UI when data changes.
-*   **Hooks:** Utilized React Hooks (e.g., `useState`, `useEffect`, `useNavigate`, `useLocation`, `useRef`, `useLoaderData`) in functional components. Also used a Custom Hook named `useTitle`.
+*   **Hooks:** Utilized a range of React Hooks (`useState`, `useEffect`, `useNavigate`, `useLocation`, `useRef`, `useLoaderData`) in functional components for state management, side effects, routing, and data fetching.  A custom `useTitle` hook was used to ensure dynamic control over the document title.
 *   **Event Handling:** Implemented event handlers to respond to user interactions.
 
 ## Data Handling and Management
