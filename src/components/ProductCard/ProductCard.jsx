@@ -16,7 +16,11 @@ const ProductCard = ({ product }) => {
                     <h2 className="card-title">{product_title}</h2>
                     <p>Price: {price}$</p>
                     <div className="card-actions">
-                        <Link to={`/product/${product_id}`}><button className="btn  border-2 rounded-3xl border-violet-500">View Details</button></Link>
+                        <Link onClick={() => {
+                            window.scroll({
+                                top: 0,
+                            })
+                        }} to={`/product/${product_id}`}><button className="btn  border-2 rounded-3xl border-violet-500">View Details</button></Link>
                     </div>
                 </div>
             </div>

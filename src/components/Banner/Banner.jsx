@@ -12,7 +12,7 @@ const Banner = ({scrollToProducts}) => {
         <div className="hero  min-h-screen text-white">
             <div className="hero-content text-center flex-col max-w-full gap-0 p-0">
                 <div className="bg-purple-500 pt-12 pb-60 rounded-b-3xl ">
-                    <h1 className="text-5xl font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
+                    <h1 className="text-5xl px-36 font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                     <p className="py-6 max-w-3xl mx-auto">
                         Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                     </p>

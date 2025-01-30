@@ -9,6 +9,7 @@ const Categories = ({ categories }) => {
                 categories.map(category => (
                     <NavLink
                         to={`category/${category.category}`}
+                        viewTransition
                         key={category.id} 
                         className={({isActive}) => `${isActive?'btn bg-violet-500 font-bold' : 'bg-white'}text-gray-500 btn rounded-3xl w-36`}>
                         {category.category}
